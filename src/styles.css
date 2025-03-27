@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Anta";
+    src: url(./assets/fonts/Anta-Regular.ttf) format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Saira";
+    src: url(./assets/fonts/SairaCondensed-Regular.ttf) format("truetype");
+    font-display: swap;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Saira", sans-serif;
+    color: #fff;
+}
+
+.brand {
+    font-size: 20px;
+    color: white;
+    font-family: "Anta", sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 30px;
+    height: auto;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.custom-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-family: "Saira", sans-serif;
+    padding: 9px 20px;
+    background-color: black;
+    color: white;
+}
+
+.custom-menu .ant-menu-item {
+    min-width: 140px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-menu .ant-menu-item a {
+    color: white !important;
+}
+
+.custom-menu .ant-menu-item:hover {
+    background-color: #e6f7ff;
+    color: #1890ff;
+}
+
+.custom-menu .ant-menu-submenu-title {
+    color: white;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-menu .ant-menu-submenu-title:hover {
+    color: #00ECFF;
+    background-color: black;
+}
+
+.custom-menu .ant-menu-submenu .ant-menu-item {
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.custom-menu .ant-menu-submenu .ant-menu-item:hover {
+    background-color: #e6f7ff;
+    color: #00ECFF;
+}
+
+.custom-menu .ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title {
+    color: #00ECFF;
+    background-color: black;
+}
+
+.custom-menu .ant-menu-submenu.ant-menu-submenu-open .ant-menu-item {
+    color: white;
+}
