@@ -1,0 +1,124 @@
+/* Fuentes personalizadas */
+@font-face {
+  font-family: "Anta";
+  src: url(./assets/fonts/Anta-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Saira";
+  src: url(./assets/fonts/SairaCondensed-Regular.ttf) format("truetype");
+  font-display: swap;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1400px;
+  grid-auto-rows: 1fr;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .item-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .item-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos del ítem (card) */
+.item-card {
+  display: flex;
+  font-family: "Saira";
+  flex-direction: column;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del producto */
+.item-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover .item-image {
+  transform: scale(1.03);
+}
+
+.item-details {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Nombre del producto */
+.item-name {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+/* Precio */
+.item-price span {
+  font-weight: 600;
+  color: #5D9CEC;
+}
+
+/* Stock y descripción */
+.item-stock,
+.item-description {
+  font-size: 0.95rem;
+  color: #777;
+  margin: 0.3rem 0;
+}
+
+/* Botón de detalle */
+.item-button {
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #5D9CEC;
+  color: #FFF;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.item-button:hover {
+  background-color: #4a8bc2;
+  transform: scale(1.05);
+}
+
+.item-button a {
+  color: inherit;
+  text-decoration: none;
+}

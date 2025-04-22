@@ -1,0 +1,41 @@
+.Counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem; /* Mayor espacio entre los elementos para una distribución más clara */
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Button {
+  background-color: #5D9CEC; /* Azul suave (como en el ItemDetail) */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Button:hover {
+  background-color: #4a8bc2; /* Azul más oscuro para hover */
+  transform: scale(1.05); /* Efecto de zoom suave */
+}
+
+.Button:disabled {
+  background-color: #bdc3c7; /* Gris claro cuando está deshabilitado */
+  cursor: not-allowed; /* Cursor de no permitido */
+}
+
+.Number {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50; /* Gris oscuro para que se vea nítido */
+  text-align: center;
+  letter-spacing: 0.5px; /* Espaciado suave entre las letras para un toque más moderno */
+}

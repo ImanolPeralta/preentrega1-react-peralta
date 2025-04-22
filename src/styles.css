@@ -1,3 +1,4 @@
+/* Fuentes personalizadas */
 @font-face {
     font-family: "Anta";
     src: url(./assets/fonts/Anta-Regular.ttf) format("truetype");
@@ -9,85 +10,143 @@
     font-display: swap;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: black;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #1E2A38;
     font-family: "Saira", sans-serif;
-    color: #fff;
+    color: #FFFFFF;
 }
 
+/* Marca */
 .brand {
-    font-size: 20px;
-    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
     font-family: "Anta", sans-serif;
+    font-weight: bold;
     display: flex;
     align-items: center;
 }
 
 .brand img {
-    width: 30px;
+    width: 60px;
     height: auto;
-    margin-left: 10px;
     vertical-align: middle;
 }
 
+/* Menú principal */
 .custom-menu {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    font-size: 18px;
-    font-family: "Saira", sans-serif;
+    font-size: 20px;
+    font-family: "Saira";
     padding: 9px 20px;
-    background-color: black;
-    color: white;
+    background-color: #1E2A38;
+    color: #FFFFFF;
 }
 
+/* Ítems del menú */
 .custom-menu .ant-menu-item {
     min-width: 140px;
-    color: white;
+    color: #FFFFFF;
     text-align: center;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Enlaces del menú */
 .custom-menu .ant-menu-item a {
-    color: white !important;
+    color: #FFFFFF !important;
 }
 
+/* Hover con azul claro */
 .custom-menu .ant-menu-item:hover {
-    background-color: #e6f7ff;
-    color: #1890ff;
+    background-color: #3B82F6;
+    color: #FFFFFF;
 }
 
+/* Submenú principal */
 .custom-menu .ant-menu-submenu-title {
-    color: white;
+    color: #FFFFFF;
     font-size: 18px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .custom-menu .ant-menu-submenu-title:hover {
-    color: #00ECFF;
-    background-color: black;
+    color: #3B82F6;
+    background-color: #111827;
 }
 
+/* Submenú interno */
 .custom-menu .ant-menu-submenu .ant-menu-item {
-    color: white;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #FFFFFF;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .custom-menu .ant-menu-submenu .ant-menu-item:hover {
-    background-color: #e6f7ff;
-    color: #00ECFF;
+    background-color: #3B82F6;
+    color: #FFFFFF;
 }
 
+/* Submenú abierto */
 .custom-menu .ant-menu-submenu.ant-menu-submenu-open > .ant-menu-submenu-title {
-    color: #00ECFF;
-    background-color: black;
+    color: white;
+    background-color: #1E2A38;
+    transform: scale(1.05);
 }
 
 .custom-menu .ant-menu-submenu.ant-menu-submenu-open .ant-menu-item {
-    color: white;
+    color: #FFFFFF;
+}
+
+/* Título de sección */
+.section-title {
+    font-size: 2.5rem;
+    color: #1E2A38;
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: bold;
+    font-family: "Saira";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #3B82F6;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar a,
+.custom-menu .ant-menu-item a,
+.custom-menu .ant-menu-submenu-title a {
+    color: white !important;
+    text-decoration: none !important;
 }
